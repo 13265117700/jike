@@ -15,7 +15,8 @@ html,body{
     height: 65px;
     width: 100%;
 }
-.container{
+
+.header-container{
     width: 1080px;
     height: 65px;
     display: flex;
@@ -28,45 +29,56 @@ html,body{
     margin-top: 14px;
 }
 
-.nav-content_sousuo{
-    margin-top: 19px;
+.nav-content{
+    display: flex;
+    align-items: center;
+    flex: 1;
+    justify-content: flex-end;
+}
+
+.page-header_guide a{
+    text-decoration:none;
+    color: #353535;
+    padding: 8px 12px;
+}
+
+.page-header_guide a:first-child{
+    color: #fa8919;
+}
+
+.nav-content_hot img{
+    width: 20px;
+    height: 12px;
+    position: absolute;
+}
+
+
+.nav-content_seek img:first-child{
     width: 25px;
     height: 25px;
-    margin-left: 20px;
 }
 
-.nav-content{
-    line-height:65px;
+.nav-content_seek img:last-child{
+    width: 20px;
+    height: 12px;
+    margin-left: -12px;
+    margin-bottom: 14px;    
+}
+
+
+.content-enter{
     display: flex;
-    justify-content: flex-end;
-    width: 946px;
-}
-
-.nav-content_hot{
-    width: 20px;
-    height: 12px;
-    margin-top: 19px;
-}
-
-.nav-content_new{
-    width: 20px;
-    height: 12px;
-    margin-top: 19px;
-}
-
-.nav-content a{
-    text-decoration: none;
-    color: #353535;
-    padding-left: 21px;
+    justify-content: space-between;
+    width: 85px;
+    align-items: center;
 }
 
 .content-enter a{
     color: #999;
+    text-decoration:none;
+    margin-left: 7px;
 }
 
-.content-class a{
-    color: #fa8919;
-}
 
 .page-content{
     width: 1080px;
