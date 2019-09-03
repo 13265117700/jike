@@ -11,54 +11,61 @@ html,body{
     margin: auto;
 }
 .page-header{
+    position: fixed;
+    top: 0;
+    background: #fff;
     border-bottom: 1px solid #eaeaea;
-    height: 65px;
+    height: 66px;
     width: 100%;
 }
 
-.header-container{
+.header-info{
     width: 1080px;
     height: 65px;
     display: flex;
     margin: 0 auto;
 }
 
-.page-logo{
+.logo{
     width: 151px;
     height: 38px;
     margin-top: 14px;
 }
 
-.nav-content{
+.header-nav{
     display: flex;
     align-items: center;
     flex: 1;
     justify-content: flex-end;
 }
 
-.page-header_guide a{
+.nav-list a{
     text-decoration:none;
     color: #353535;
     padding: 8px 12px;
 }
 
-.page-header_guide a:first-child{
+.nav-list a:hover{
     color: #fa8919;
 }
 
-.nav-content_hot img{
+.nav-list a:first-child{
+    color: #fa8919;
+}
+
+.nav-list_hot img{
     width: 20px;
     height: 12px;
     position: absolute;
 }
 
 
-.nav-content_seek img:first-child{
+.nav-img img:first-child{
     width: 25px;
     height: 25px;
 }
 
-.nav-content_seek img:last-child{
+.nav-img img:last-child{
     width: 20px;
     height: 12px;
     margin-left: -12px;
@@ -66,26 +73,26 @@ html,body{
 }
 
 
-.content-enter{
+.info-user{
     display: flex;
     justify-content: space-between;
     width: 85px;
     align-items: center;
 }
 
-.content-enter a{
+.info-user a{
     color: #999;
     text-decoration:none;
     margin-left: 7px;
 }
 
 
-.page-content{
+.page-body{
     width: 1080px;
-    margin: 0 auto 60px;
+    margin: 116px auto 60px;
 }
 
-.content-label{
+.body-container{
     display: flex;
     margin-top:50px;
     height: 50px;
@@ -93,31 +100,38 @@ html,body{
     align-items: center
 }
 
-.nav-list{
+.body-container-list{
+    width: 100%;
     height: 28px;
-    width: 970px;
-    text-rendering: optimizelegibility;
+    display: flex;
+    align-items: center;
 }
 
-.nav-list a{
+.body-container-list a{
     text-decoration: none;
     padding-left: 30px;
-    font-size: 18px;
+    font-size: 17px;
     color: #333;
-
+    padding: 0 20px;
+    margin-right: 20px;
+    border-radius: 14px;
+    height: 28px;
+    display: flex;
+    align-items: center;
 }
 
-.nav-list_course{
+.body-container-list :first-child{
     font-size: 15px;
     margin-right: 18px;
     font-weight: 400;
 }
 
-.nav-list :nth-child(2){
+.body-container-list :nth-child(2){
     color: #fa8919;
+    background: #fbf5ee;
 }
 
-.nav-rss{
+.body-container-button{
     outline: none;
     background: #fff;
     cursor: pointer;
@@ -133,60 +147,91 @@ html,body{
     border-radius: 5px;
 }
 
-.colum-content{
+.body-container button:hover{
+    color: #ce4e45;
+    border-color: #ce4e45;
+}
+
+.read-content{
     display: flex;
     -webkit-box-pack: justify;
     justify-content: space-between;
 }
 
-.left-course{
+.read-content_left{
     width: 711px;
 }
 
-.left-guide{
+.read-content_list{
     width: 100%;
     height: 51px;
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid hsla(0, 0%, 91%, 6);
+    align-items: center;
 }
 
-.left-guide a{
+.read-content_list a{
     text-decoration: none;
     color: #888;
-    padding-right: 20px;
-    margin-right: 20px;
     font-size: 13px;
 }
 
+.read-content_list a:first-child{
+    color: #666565;
+}
+.content-list{
+    display: flex;
+}
 
-.left-colum{
+.content-list a{
+    padding-right: 40px;
+}
+
+
+
+
+
+
+/* .body-info-img{
     display: flex;
     align-items: center;
     width: 100%;
     height: 253px;
 }
 
-.left-colum img{
+.body-info-img img{
     width: 127px;
     height: 168px;
-}
+    border-radius: 5px;
+    border: 0;
+    cursor: pointer;
+} */
 
-.left-colum_content{
+
+.user-info{
     margin-left: 20px;
     flex-grow:1;
     padding: 40px 0;
     border-bottom: 1px solid hsla(0, 0%, 91%, 6);
 }
 
-.left-colum_content a{
+.user-info a{
     text-decoration: none;
     color: #404040;
 }
 
+/* .user-info_tag{
+    height: 57px;
+} */
+
+
+
 .column-detail-author{
     display: flex;
     justify-content: space-between;
+    height: 27px;
+    align-items: center;
 }
 
 .column-detail-author a{
@@ -206,6 +251,7 @@ html,body{
 
 .detail-author{
     margin-top: 5px;
+    height: 25px;
 }
 
 .detail-author a{
@@ -219,8 +265,7 @@ html,body{
     white-space: nowrap;
     width: 100%;
     height: 80px;
-    padding: 5px 0 16px;
-    margin-top: 15px;
+    padding: 16px 0 5px;
 }
 
 .column-link a{
@@ -254,6 +299,8 @@ html,body{
 .column-new{
     display: flex;
     justify-content:space-between;
+    height: 35px;
+    align-items: center;
 }
 
 .column-take button{
@@ -264,7 +311,11 @@ html,body{
     border-radius: 5px;
     color: #fff;
     font-size: 14px;
-    margin-right: 10px;
+    cursor: pointer;
+}
+
+.column-take button:hover{
+    background-color: #e77808;
 }
 
 .column-price{
@@ -298,6 +349,7 @@ html,body{
     height: 138px;
     overflow: hidden;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .right-column_hot{
@@ -340,6 +392,12 @@ html,body{
 .focus-icon img{
     width: 45.672px;
     height: 45.672px;
+    cursor: pointer;
+    border-radius:50%;
+}
+
+.focus-icon img:hover{
+    box-shadow:0 2px 4px 1px hsla(0,0%,65%,.35);
 }
 
 .focus-icon_touch{
@@ -374,7 +432,14 @@ html,body{
     height: 35px;
     padding: 0 16px;
     margin-top: 35px;
+    background: #fcfcfc;
+    align-items: center;
 }
+
+.focus-writer:hover{
+    background-color: #e4f5f5;
+}
+
 
 .focus-writer_mark img{
     width: 20px;
@@ -394,6 +459,14 @@ html,body{
 }
 
 .page-footer{
+    background: #fafafa;
+}
+
+.footer-badge img{
+    cursor: pointer;
+}
+
+.page-footer_content{
     width: 100%;
     height: 45px;
     max-width:1400px;
@@ -401,7 +474,6 @@ html,body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #fafafa;
 }
 
 .page-footer span{
@@ -422,12 +494,18 @@ html,body{
 .page-footer_we{
     display: flex;
     width: 238px;
-    justify-content: space-between;
+    justify-content: flex-start ;
     margin-left: 20px;
     align-items: center;
+}
+
+.page-footer_icon{
+    margin-left: 10px;
 }
 
 .page-footer_icon img{
     width: 25px;
     height: 25px;
+    margin-right: 16px;
+    
 }
